@@ -204,7 +204,7 @@ nav a:hover::after{ width: 100%; }
   color: white;
   display: flex; align-items: center; justify-content: center;
   text-align: center;
-  background: url(images/bg3.webp) no-repeat center/cover;
+  background: url(../images/bg3.webp) no-repeat center/cover;
   position: relative; overflow: hidden;
   will-change: transform;
 }
