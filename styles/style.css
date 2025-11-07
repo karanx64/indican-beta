@@ -14,6 +14,7 @@
   --brand-2: #f85e00;
   --ink: #222;
   --paper: #faf8f5;
+  font-size-adjust: 0.5; /* global fallback */
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -36,6 +37,7 @@ body {
 h1,h2,h3 {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   letter-spacing: 0.5px;
+  font-size-adjust: 0.46;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -199,15 +201,21 @@ nav a:hover::after{ width: 100%; }
 /* ==========================
    HERO
 =========================== */
-.hero {
-  height: 100vh;
-  color: white;
-  display: flex; align-items: center; justify-content: center;
+.hero {   position: relative;
+  background: none;
+  min-height: 100svh;            /* full viewport incl. iOS UI */
+  display: flex;                 /* center content */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: url(../images/bg3.webp) no-repeat center/cover;
-  position: relative; overflow: hidden;
-  will-change: transform;
-}
+  color: #fff;
+
+  /* override the generic section padding */
+  padding-block: 0;              /* remove vertical padding */
+  padding-inline: 10%; }
+.hero .hero-bg,
+.hero .hero-bg img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
 
 .hero::after{
   content: "";
@@ -332,5 +340,27 @@ footer{
 }
 .footer-col{ flex: 1 1 250px; }
 .footer-col h4{ margin-bottom: 1rem; color: var(--brand-2); }
-.socials a{ margin-right: 1rem; color: var(--brand-2); font-weight: 600; }
+
 .footer-bottom{ text-align:center; width:100%; margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; font-size: 0.9rem; }
+
+/* socials */
+.socials a {
+  margin-right: 1rem;
+  color: white;
+  display: inline-flex;          /* centers SVG neatly */
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, color .2s ease;
+}
+.socials a:hover { transform: translateY(-1px); }
+
+.socials a svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+
+/* defer offscreen work */
+.programs, .videos, .testimonials, .contact, footer { content-visibility: auto; contain-intrinsic-size: 800px; }
+
