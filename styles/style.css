@@ -254,7 +254,7 @@ nav a:hover::after{ width: 100%; }
 }
 .card:hover{ transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 
-.card img{ display:block; width:100%; height:auto; aspect-ratio: 16/10; }
+.card img{ display:block; width:100%; height:auto; object-fit: cover; }
 .card-content{ padding: 1.25rem; }
 .card-content h3{ color:#222; margin-bottom: 0.5rem; }
 .card-content p{ color:#555; font-size: 0.95rem; line-height: 1.5; }
@@ -310,7 +310,8 @@ nav a:hover::after{ width: 100%; }
 }
 .testimonial::before{ left: -12px; top: -12px; }
 .testimonial::after{ right: -12px; bottom: -12px; }
-.author{ margin-top: 1rem; font-weight: 700; color: var(--brand); }
+.author{ margin-top: 1rem; font-weight: 700; color:#b63 }
+
 
 /* ==========================
    CONTACT
@@ -342,6 +343,8 @@ footer{
 .footer-col h4{ margin-bottom: 1rem; color: var(--brand-2); }
 
 .footer-bottom{ text-align:center; width:100%; margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; font-size: 0.9rem; }
+footer .footer-col a { padding: .5rem .25rem; display:inline-block; }
+
 
 /* socials */
 .socials a {
@@ -362,5 +365,7 @@ footer{
 
 
 /* defer offscreen work */
-.programs, .videos, .testimonials, .contact, footer { content-visibility: auto; contain-intrinsic-size: 800px; }
+.programs, .videos, .testimonials, .contact, footer { 
+  content-visibility: auto; 
+  contain-intrinsic-size: 800px; }
 
