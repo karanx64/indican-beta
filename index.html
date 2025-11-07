@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ==========================
+      META & SEO BASICS
+  =========================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Rostrum Academy — Unleash your inner performer. Modern acting, voice, and movement training.">
+  <meta name="keywords" content="theater academy, acting school, performing arts, drama, stage">
+  <meta name="author" content="The Rostrum Academy">
+  <title>The Rostrum Academy</title>
+
+  <!-- ==========================
+      FONT & STYLE
+  =========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Load both families actually used in CSS -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"></noscript>
+
+  <!-- Local CSS (fixed path) -->
+  <link rel="preload" href="styles/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles/style.css"></noscript>
+
+  <!-- Icons: defer load to avoid blocking render -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+
+  <!-- Preload hero LCP background to improve LCP -->
+  <link rel="preload" as="image" href="images/bg3.webp" imagesrcset="images/bg3.webp 1x, images/bg3@2x.webp 2x">
+
+  <!-- ==========================  
+      SCRIPTS (fixed paths, deferred)
+  =========================== -->
+  <script src="scripts/contactForm.js" defer></script>
+  <script src="scripts/Nav.js" defer></script>
+</head>
+<body>
+  <!-- ==========================
+      HEADER
+  =========================== -->
+  <header>
+    <div class="header-inner">
+      <a href="#hero" class="logo">The Rostrum</a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
+
+    <nav id="site-nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#videos">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==========================
+      HERO SECTION
+  =========================== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-content">
+      <h1>Unleash the Performer Within</h1>
+      <p>Discover the art of stage, voice, and movement at The Rostrum Academy — where passion meets mastery.</p>
+      <a href="#programs" class="cta-btn">Explore Programs</a>
+    </div>
+  </section>
+
+  <!-- ==========================
+      PROGRAMS SECTION
+  =========================== -->
+  <section class="programs" id="programs" aria-labelledby="programs-title">
+    <h2 id="programs-title">Our Programs</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/pro1.webp" alt="Acting Fundamentals" width="800" height="500" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3>Acting Fundamentals</h3>
+          <p>Master expression, emotion, and body language through foundational training.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/pro2.webp" alt="Voice &amp; Diction" width="800" height="500" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3>Voice &amp; Diction</h3>
+          <p>Develop your vocal power, tone, and clarity to command any stage.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/pro3.webp" alt="Movement &amp; Mime" width="800" height="500" loading="lazy" decoding="async">
+        <div class="card-content">
+          <h3>Movement &amp; Mime</h3>
+          <p>Learn the art of physical storytelling and movement-based acting.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================
+      VIDEO CARDS
+  =========================== -->
+  <section class="videos" id="videos" aria-labelledby="videos-title">
+    <h2 id="videos-title">Scenes from Our Stage</h2>
+    <div class="video-grid">
+  <figure class="video-card">
+    <iframe
+      src="https://player.vimeo.com/video/76979871?h=0a7d2efc"
+      title="Vimeo sample video 1"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </figure>
+
+  <figure class="video-card">
+    <iframe
+      src="https://player.vimeo.com/video/22439234?h=0a7d2efc"
+      title="Vimeo sample video 2"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </figure>
+
+  <figure class="video-card">
+    <iframe
+      src="https://player.vimeo.com/video/39508623?h=0a7d2efc"
+      title="Vimeo sample video 3"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </figure>
+</div>
+
+  </section>
+
+  <!-- ==========================
+      TESTIMONIALS
+  =========================== -->
+  <section class="testimonials" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title">What Our Students Say</h2>
+    <blockquote class="testimonial">
+      <p>“The Rostrum transformed me from a shy dreamer to a confident performer. The mentors breathe life into art.”</p>
+      <footer class="author">— Maya Thorne, Alumni</footer>
+    </blockquote>
+  </section>
+
+  <!-- ==========================
+      CONTACT 
+  =========================== -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Join the Stage</h2>
+    <p>Ready to start your journey? Get in touch below.</p>
+    <form id="contact-form" class="contact-form" novalidate>
+      <input type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+      <input type="email" name="email" placeholder="Your Email" autocomplete="email" inputmode="email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Custom Alert -->
+    <div id="alert" class="alert" role="alert" aria-live="polite" aria-atomic="true">
+      <div class="alert-box">
+        <p>Message Sent</p>
+        <button type="button" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================
+      FOOTER
+  =========================== -->
+  <footer>
+    <div class="footer-col">
+      <h4>The Rostrum Academy</h4>
+      <p>Where stories find their voice and performers find their truth.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#videos">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col socials">
+      <h4>Follow Us</h4>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+    </div>
+    <div class="footer-bottom">© 2025 The Rostrum Academy. All rights reserved.</div>
+  </footer>
+</body>
+</html>
