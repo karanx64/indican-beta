@@ -237,11 +237,13 @@ nav a:hover::after {
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1500;
+  pointer-events: none;
 }
 
 .alert.show {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .alert-box {
