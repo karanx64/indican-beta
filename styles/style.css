@@ -425,6 +425,8 @@ nav a:hover::after {
   border-radius: 15px;
   background: #000;
   contain: layout paint;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .video-card iframe {
@@ -438,6 +440,8 @@ nav a:hover::after {
 @media (hover: hover) and (pointer: fine) {
   .video-card:hover {
     transform: scale(1.03);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 }
 
